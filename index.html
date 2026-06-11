@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cutesy Scoop — Website Coming Soon</title>
+  <meta name="description" content="Cutesy Scoop — 1 scoop = 10,000₮, 10–15 cute surprise items. Coming soon demo website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Cutesy Scoop home">
+      <span class="brand-mark">🥄</span>
+      <span><b>Cutesy Scoop</b><small>mystery cute store</small></span>
+    </a>
+    <nav>
+      <a href="#how">Яаж ажилладаг вэ?</a>
+      <a href="#scoop">Scoop</a>
+      <a href="#orders">Захиалга</a>
+      <a href="#seller">Seller</a>
+    </nav>
+    <button class="login-btn">Нэвтрэх</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="leak-badge">LEAK! ✨ Website coming soon</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">6–15 насны охидод зориулсан kawaii mystery scoop</p>
+          <h1>Азтай халбагадаж 10–15 хөөрхөн surprise аваарай!</h1>
+          <p class="lead">1 Scoop = <b>10,000₮</b>. Дотор нь хавчаар, memo, keychain, sticker, charm гэх мэт жижиг cute зүйлс санамсаргүй гарна.</p>
+          <div class="hero-actions">
+            <button class="primary" data-scroll="#scoop">Одоо demo scoop хийх</button>
+            <button class="secondary" data-scroll="#how">Яаж ажиллах вэ?</button>
+          </div>
+          <div class="trust-row">
+            <span>🛡️ Эцэг эхийн итгэл</span>
+            <span>💳 QPay mock</span>
+            <span>📦 Захиалга хянах</span>
+          </div>
+        </div>
+
+        <div class="scoop-card hero-scoop">
+          <div class="basket" aria-label="Cutesy Scoop basket">
+            <span class="toy t1">🎀</span><span class="toy t2">🔑</span><span class="toy t3">📝</span><span class="toy t4">🌸</span><span class="toy t5">✨</span><span class="toy t6">🧸</span>
+            <div class="scoop-spoon">🥄</div>
+          </div>
+          <div class="price-chip">1 Scoop = 10,000₮</div>
+          <div class="count-chip">10–15 зүйл гарна!</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="section-head">
+        <p>Simple flow</p>
+        <h2>4 алхмаар азаа үзнэ</h2>
+      </div>
+      <div class="steps">
+        <article><b>1</b><h3>Scoop сонгох</h3><p>Basic Scoop 10,000₮-өөр эхэлнэ.</p></article>
+        <article><b>2</b><h3>Төлбөр төлөх</h3><p>QPay, банк, картаар төлөх demo flow.</p></article>
+        <article><b>3</b><h3>Virtual scoop</h3><p>Халбага хөдөлж, 10–15 item reveal хийнэ.</p></article>
+        <article><b>4</b><h3>Захиалга хянах</h3><p>Бэлтгэж байна → Хүргэж байна → Хүргэгдсэн.</p></article>
+      </div>
+    </section>
+
+    <section id="scoop" class="section app-panel">
+      <div class="phone-panel shop-panel">
+        <div class="panel-top"><span>🎀 Scoop сонгох</span><small>Demo</small></div>
+        <div class="product-list">
+          <button class="product active" data-type="Basic Scoop" data-price="10000"><span>💗</span><b>Basic Scoop</b><em>10,000₮</em></button>
+          <button class="product" data-type="Premium Scoop" data-price="20000"><span>💜</span><b>Premium Scoop</b><em>20,000₮</em></button>
+          <button class="product" data-type="Mega Scoop" data-price="50000"><span>💛</span><b>Mega Scoop</b><em>50,000₮</em></button>
+        </div>
+        <div class="checkout-box">
+          <div><span>Сонгосон</span><b id="selectedType">Basic Scoop</b></div>
+          <div><span>Нийт</span><b id="selectedPrice">10,000₮</b></div>
+          <button class="primary wide" id="payBtn">Төлбөр төлөх demo</button>
+        </div>
+      </div>
+
+      <div class="phone-panel scoop-game">
+        <div class="panel-top"><span>🥄 Scoop хийх</span><small id="paymentStatus">Төлбөр хүлээгдэж байна</small></div>
+        <div class="scoop-stage">
+          <div class="mini-bin" id="miniBin">🎁🎀🔑📝✨🌸🧸</div>
+          <div class="big-spoon" id="bigSpoon">🥄</div>
+        </div>
+        <button class="primary wide" id="scoopBtn" disabled>SCOOP хийх!</button>
+        <p class="hint">Demo дээр төлбөр төлсний дараа scoop идэвхжинэ.</p>
+      </div>
+
+      <div class="phone-panel result-panel">
+        <div class="panel-top"><span>✨ Таны зүйлс</span><small id="itemCount">0 зүйл</small></div>
+        <div class="items-grid" id="itemsGrid">
+          <div class="empty-state">Scoop хийсний дараа 10–15 surprise энд гарна.</div>
+        </div>
+        <button class="secondary wide" data-scroll="#orders">Захиалга хянах</button>
+      </div>
+    </section>
+
+    <section id="orders" class="section order-wrap">
+      <div class="order-card">
+        <div class="section-head left"><p>Order tracking</p><h2>Миний захиалга</h2></div>
+        <div class="order-summary">
+          <span id="orderNumber">#CS20260607</span>
+          <b id="orderTitle">Basic Scoop</b>
+          <em id="orderAmount">10,000₮</em>
+        </div>
+        <div class="timeline">
+          <div class="timeline-step active"><b>✓</b><span>Бэлтгэж байна</span><small>Захиалга баталгаажсан</small></div>
+          <div class="timeline-step"><b>2</b><span>Савлаж байна</span><small>Item-ууд багцлагдана</small></div>
+          <div class="timeline-step"><b>3</b><span>Хүргэж байна</span><small>Хүргэлтэнд гарна</small></div>
+          <div class="timeline-step"><b>4</b><span>Хүргэгдсэн</span><small>Амжилттай дуусна</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seller" class="section seller-dashboard">
+      <div class="dashboard-head">
+        <div><p>Seller dashboard</p><h2>Худалдагчийн demo самбар</h2></div>
+        <button class="secondary">Бүх захиалга</button>
+      </div>
+      <div class="stats">
+        <div><span>Өнөөдрийн захиалга</span><b>87</b><em>+23%</em></div>
+        <div><span>Өнөөдрийн орлого</span><b>870,000₮</b><em>+18%</em></div>
+        <div><span>Нийт хэрэглэгч</span><b>1,246</b><em>+12%</em></div>
+        <div><span>Үлдэгдэл бараа</span><b>320</b><em>OK</em></div>
+      </div>
+      <div class="dashboard-grid">
+        <div class="table-card">
+          <h3>Сүүлийн захиалгууд</h3>
+          <table>
+            <thead><tr><th>ID</th><th>Хэрэглэгч</th><th>Scoop</th><th>Төлөв</th><th>Дүн</th></tr></thead>
+            <tbody>
+              <tr><td>#MS123456</td><td>Баярмаа</td><td>Basic</td><td><span class="pill pink">Бэлтгэж</span></td><td>10,000₮</td></tr>
+              <tr><td>#MS123455</td><td>Номин</td><td>Premium</td><td><span class="pill purple">Савлаж</span></td><td>20,000₮</td></tr>
+              <tr><td>#MS123454</td><td>Ариунзаяа</td><td>Basic</td><td><span class="pill blue">Хүргэж</span></td><td>10,000₮</td></tr>
+              <tr><td>#MS123453</td><td>Солонго</td><td>Mega</td><td><span class="pill green">Хүргэгдсэн</span></td><td>50,000₮</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="popular-card">
+          <h3>Хамгийн их гарсан зүйлс</h3>
+          <ol>
+            <li><span>🔑 Keychain</span><b>256</b></li>
+            <li><span>✨ Sticker pack</span><b>198</b></li>
+            <li><span>🎀 Hair clip</span><b>176</b></li>
+            <li><span>📝 Memo pad</span><b>168</b></li>
+            <li><span>🌸 Charm</span><b>142</b></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <h2>Яагаад Cutesy Scoop гэж?</h2>
+      <div class="why-grid">
+        <article>🎁<h3>Санамсаргүй бэлэг</h3><p>Юу гарахыг мэдэхгүй адал явдалтай.</p></article>
+        <article>💎<h3>Ховор & Jackpot</h3><p>Ховор бараа гарах боломжтой.</p></article>
+        <article>🛡️<h3>Эцэг эхийн итгэл</h3><p>Хүүхдэд ээлтэй, тодорхой үнэ, хяналттай.</p></article>
+        <article>🚚<h3>Захиалга хянах</h3><p>Бэлтгэлээс хүргэлт хүртэл харагдана.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <b>Cutesy Scoop</b>
+    <span>Website coming soon demo · Хөрөнгө оруулагчдад үзүүлэх prototype</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

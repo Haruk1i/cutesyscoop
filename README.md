@@ -1,17 +1,16 @@
-# Cutesy Scoop Demo Website
+# Cutesy Scoop — Mobile Sponsor Demo
 
-Static prototype website for investor / audience preview.
+Static prototype: open `index.html` in a browser or upload the folder to GitHub Pages / Netlify / Vercel static hosting.
 
-## How to view on phone
-1. Upload this folder/ZIP to Netlify Drop or Vercel.
-2. Or open `index.html` in any browser.
+## Demo features
+- Mobile-first customer flow
+- Package select → mock payment → virtual scoop reveal → order tracking
+- Local seller dashboard without database
+- Orders are saved in browser `localStorage`
 
-## Includes
-- Home / coming soon style landing page
-- Scoop selection
-- Mock payment button
-- Virtual scoop reveal with 10–15 items
-- Order tracking demo
-- Seller dashboard demo
+## Admin login
+- Username: `Temuujin1`
+- Password: `11223344`
 
-This is a demo prototype. Payment, real accounts, database, and delivery integrations are not connected.
+## Note
+This is a sponsor/demo prototype. No real payment, database, inventory, or delivery API is connected yet.

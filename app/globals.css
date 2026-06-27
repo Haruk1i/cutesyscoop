@@ -1,0 +1,2 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{background:linear-gradient(180deg,#fff8fc,#ffe9f5 45%,#fff);color:#5b1740}.sparkle{background-image:radial-gradient(#fff 1px,transparent 1px);background-size:18px 18px}.cute{transition:.25s}.cute:hover{transform:translateY(-3px)}
